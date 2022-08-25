@@ -107,7 +107,7 @@ export default {
     },
     exit() {
       localStorage.removeItem('token')
-      this.$router.push('/login')
+      this.$router.push('/')
       // console.log(this.$refs)
     }
   }

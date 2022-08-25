@@ -55,6 +55,11 @@ export default {
     this.list = data1
     // const data2 = JSON.parse(localStorage.getItem('id'))
     // console.log(data2)
+    console.log(this.list)
+    if (this.list === null) {
+      this.list = [{ id: 0, text: '好好学习 天天向上', time: '2022-8-23 13:14:13' }]
+      console.log(this.list)
+    }
   },
 
   methods: {

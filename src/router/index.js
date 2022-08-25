@@ -24,19 +24,20 @@ router.beforeEach((to, from, next) => {
   // next()
   // 判断用户要到达的hash地址是否等于/main 等于则要登录才能访问 不等于直接放行不需要登录
   // 读取localStorage中的token值
+  const token = localStorage.getItem('token')
   if (to.path === '/home' || to.path === '/user') {
-    const token = localStorage.getItem('token')
     if (token) {
       next()
     } else {
-      next('./login')
+      next('/login')
     }
-  } else if (to.path === '/') {
-    const token = localStorage.getItem('token')
+  } else if (to.path === '/login') {
     if (token) {
-      next('./logined')
+      next('/logined')
+      // router.push('logined')
     } else {
-      next('./login')
+      next('/login')
+      // router.push('logined')
     }
   } else {
     next()

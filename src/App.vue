@@ -9,7 +9,7 @@
                 inactive-color="#000"
                 ref="refTabbar">
       <van-tabbar-item icon="certificate"
-                       to="/">登录</van-tabbar-item>
+                       to="/login">登录</van-tabbar-item>
       <van-tabbar-item icon="smile-o"
                        to="/home">首页</van-tabbar-item>
       <van-tabbar-item icon="user-circle-o"
